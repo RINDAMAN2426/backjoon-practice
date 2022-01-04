@@ -1,7 +1,10 @@
-const input = require("fs").readFileSync("/dev/stdin").toString().split(" ");
-const a = Number(input[0]);
-const b = Number(input[1]);
-const c = Number(input[2]);
+const input = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split(" ")
+  .map(Number);
+const [a, b, c] = input;
 
 console.log(
   "%d\n%d\n%d\n%d",
