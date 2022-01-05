@@ -13,7 +13,7 @@ const stringToNumber = (data) =>
 
 const createReverseStar = (index, maxLength) =>
   Array.from({ length: maxLength }, (_, k) => {
-    if (index <= k + 1) {
+    if (maxLength - index <= k + 1) {
       return "*";
     } else {
       return " ";
@@ -23,7 +23,7 @@ const createReverseStar = (index, maxLength) =>
 rl.on("line", (string) => {
   const number = stringToNumber(string);
   Array.from({ length: number }, (_, index) => {
-    star += createReverseStar(number - index, number) + "\n";
+    star += createReverseStar(index, number) + "\n";
   });
 
   console.log(star);
