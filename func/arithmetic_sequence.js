@@ -1,3 +1,4 @@
+// no. 1065
 const rl = require("readline").createInterface({
   input: process.stdin,
 });
